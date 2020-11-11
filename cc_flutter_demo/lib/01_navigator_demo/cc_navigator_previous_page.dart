@@ -40,8 +40,21 @@ class _CCNavigatorPreviousPageState extends State<CCNavigatorPreviousPage> {
 
   void pushNextPage() {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => CCNavigatorNextPage())).then((value) {
-          
-        });
+        context, 
+        MaterialPageRoute(builder: (context) => CCNavigatorNextPage()
+      )
+    ).then((value) {
+
+      }
+    );
+
+    // Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>CCNavigatorNextPage()), (route) => false);
+
+    // Navigator.of(context).pushNamed("/second");
+    // Navigator.of(context).pushNamedAndRemoveUntil(
+    //   "/second", 
+    //   (route){
+    //     return true;
+    // });
   }
 }
